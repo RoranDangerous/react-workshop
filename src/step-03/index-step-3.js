@@ -64,8 +64,12 @@ function App() {
             </th>
             {/* TODO: Replace the contents of these `th` elements 
                  to use our new TotalScore component */}
-            <th>{scores.reduce((acc, score) => acc + score.chad, 0)}</th>
-            <th>{scores.reduce((acc, score) => acc + score.kaileen, 0)}</th>
+            <th>
+              <TotalScore scores={scores} player="chad" />
+            </th>
+            <th>
+              <TotalScore scores={scores} player="kaileen" />
+            </th>
           </tr>
         </tfoot>
       </table>

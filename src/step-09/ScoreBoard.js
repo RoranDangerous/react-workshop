@@ -63,8 +63,22 @@ export default class ScoreBoard extends React.Component {
                   onChangeScore={this.changeScore}
                 />
               </td>
-              <td>{score.chad}</td>
-              <td>{score.kaileen}</td>
+              <td>
+                <Score
+                  player="chad"
+                  index={i}
+                  score={score.chad}
+                  onChangeScore={this.changeScore}
+                />
+              </td>
+              <td>
+                <Score
+                  player="kaileen"
+                  index={i}
+                  score={score.kaileen}
+                  onChangeScore={this.kaileen}
+                />
+              </td>
             </tr>
           ))}
           <tr>

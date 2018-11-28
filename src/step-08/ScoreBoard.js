@@ -77,7 +77,9 @@ export default class ScoreBoard extends React.Component {
                     with the spread operator. E.g. var newArr = [...oldArr, newItem] will create a
                     new array with all the `oldArr` values + the `newItem`.
                   */
-                  this.setState({ round: round + 1 })
+                  this.setState({
+                    scores: [...scores, { jonathan: 2, chad: 6, kaileen: 5 }]
+                  })
                 }}
               >
                 Add round {round + 1}

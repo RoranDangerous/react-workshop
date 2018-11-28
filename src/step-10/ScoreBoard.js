@@ -16,7 +16,7 @@ as props (i.e. it should not use players from it's own local state)
 export default class ScoreBoard extends React.Component {
   state = {
     // our score board is now initially empty.
-    players: [],
+    players: this.props.players,
     scores: []
   }
 
@@ -29,13 +29,14 @@ export default class ScoreBoard extends React.Component {
   render() {
     const scores = this.state.scores
     const round = this.state.round
+    const players = this.props.players
 
     return (
       <table>
         <thead>
           <tr>
             <th />
-            {this.state.players.map(player => (
+            {players.map(player => (
               <th key={player}>{player}</th>
             ))}
           </tr>
@@ -44,7 +45,7 @@ export default class ScoreBoard extends React.Component {
           {this.state.scores.map((score, i) => (
             <tr key={i}>
               <td>Round {i + 1}</td>
-              {this.state.players.map(player => (
+              {players.map(player => (
                 <td key={player}>
                   <Score
                     player={player}
@@ -57,7 +58,7 @@ export default class ScoreBoard extends React.Component {
             </tr>
           ))}
           <tr>
-            <td colspan={this.state.players.length + 1}>
+            <td colspan={players.length + 1}>
               <button onClick={this.addRound}>
                 Add round {this.state.scores.length + 1}
               </button>
@@ -67,7 +68,7 @@ export default class ScoreBoard extends React.Component {
         <tfoot>
           <tr>
             <th>Total</th>
-            {this.state.players.map(player => (
+            {players.map(player => (
               <th key={player}>
                 <TotalScore scores={this.state.scores} player={player} />
               </th>

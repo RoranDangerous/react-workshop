@@ -93,13 +93,13 @@ function App() {
             <th>Total</th>
             {/* TODO: Replace these with the new improved TotalScore */}
             <th>
-              <TotalScoreOld scores={scores} player="jonathan" />
+              <TotalScore scores={scores} player="jonathan" />
             </th>
             <th>
-              <TotalScoreOld scores={scores} player="chad" />
+              <TotalScore scores={scores} player="chad" />
             </th>
             <th>
-              <TotalScoreOld scores={scores} player="kaileen" />
+              <TotalScore scores={scores} player="kaileen" />
             </th>
           </tr>
         </tfoot>

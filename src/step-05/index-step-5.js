@@ -5,7 +5,7 @@ import 'milligram'
 
 const scores = [
   { jonathan: 4, chad: 3, kaileen: 6 },
-  { jonathan: 3, chad: 6, kaileen: 5 }
+  { jonathan: 20, chad: 6, kaileen: 5 }
 ]
 
 /*
@@ -28,7 +28,7 @@ function TotalScore(props) {
   )
   const playerScore = totals[props.player]
   const isMax = playerScore === max
-  const style = { fontSize: 18, color: 'Black', textDecoration: 'underline' }
+  const style = { fontSize: 36, color: 'cyan', textDecoration: 'none' }
   // If you know CSS this should look familiar but not quite right. First of all,
   // it's in javascript, not CSS. Secondly, it's using a `style` attribute
   // of the `<span>` element.

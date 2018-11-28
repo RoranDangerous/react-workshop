@@ -18,7 +18,6 @@ class Game extends React.Component {
   // once you do that, try typeing. open the console to see what happens
   // as you type. What is happening?
   updateNewPlayer = event => {
-    console.log(event.target.value)
     this.setState({ newPlayer: event.target.value })
   }
 
@@ -42,12 +41,12 @@ class Game extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.noop}>
+        <form onSubmit={this.addNewPlayer}>
           <input
             type="text"
-            value={''}
+            value={this.state.newPlayer}
             placeholder="New player"
-            onChange={this.noop}
+            onChange={this.updateNewPlayer}
           />
           <button>Add Player</button>
         </form>
