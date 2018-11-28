@@ -76,7 +76,7 @@ export default class ScoreBoard extends React.Component {
                   player="kaileen"
                   index={i}
                   score={score.kaileen}
-                  onChangeScore={this.kaileen}
+                  onChangeScore={this.changeScore}
                 />
               </td>
             </tr>
